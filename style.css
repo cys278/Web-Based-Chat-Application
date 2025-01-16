@@ -1,0 +1,407 @@
+body {
+  height: 100vh;
+  background-color: white;
+
+}
+
+.logo {
+  display: inline-block;
+  margin-left:20px;
+  height: 120px;
+  width: 170px;
+}
+/*Switch CSS*/
+
+/* The switch - the box around the slider */
+.switch {
+  font-size: 17px;
+  position: absolute; /* Position relative to the nearest positioned ancestor (body) */
+  top: 160px; /* Vertically center the switch relative to the container */
+  transform: translateY(-50%); /* Vertical centering adjustment */
+  left: 70px; /* 340px (container left margin) - 35px (desired left margin) */
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-top: 5px;
+  background-color: rgb(199, 219, 215);
+  transition: 0.4s;
+  border-radius: 30px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border: 1px solid #02495d;
+}
+
+body.dark-mode .slider {
+  background-color: #2b4360; /* Dark background */
+  border: 2px solid #fff; /* White border for dark mode */
+}
+
+.slider .fug .nav {
+  position: absolute;
+  height: 1.4em;
+  width: 1.5em;
+  left: 0.3em;
+  bottom: 0.3em;
+  transition: 0.4s;
+  z-index: 10;
+  transform: rotate(45deg);
+  fill: #02495d;
+}
+
+/* Dark Mode - Rocket is white */
+body.dark-mode .slider .fug .nav {
+  fill: #fff; /* White for dark mode */
+}
+
+.switch input:checked + .slider {
+  background-color: #2b4360;
+}
+
+.switch input:focus + .slider {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.switch input:checked + .slider .fug .nav {
+  transition: 0.4s;
+  transform: translateX(1.3em) rotate(45deg);
+  padding: 3px;
+  animation: 4s nav linear infinite;
+}
+
+@keyframes nav {
+  0% {
+    transform: translateX(1.3em) rotate(45deg);
+  }
+  10% {
+    transform: translateX(1.1em) rotate(45deg);
+  }
+  30% {
+    transform: translateX(1.2em) rotate(45deg);
+  }
+  50% {
+    transform: translateX(1em) rotate(45deg);
+  }
+  70% {
+    transform: translateX(1.2em) rotate(45deg);
+  }
+  80% {
+    transform: translateX(1em) rotate(45deg);
+  }
+  90% {
+    transform: translateX(1.2em) rotate(45deg);
+  }
+  100% {
+    transform: translateX(1.3em) rotate(45deg);
+  }
+}
+
+.star {
+  opacity: 0;
+  transition: 0.2s linear;
+}
+
+.switch input:checked + .slider .star {
+  opacity: 1;
+  transition: 0.2s linear;
+  animation: 2s piscar linear infinite;
+}
+
+.star:nth-last-child(1) {
+  position: absolute;
+  top: 7px;
+  left: 13px;
+}
+.star:nth-last-child(2) {
+  position: absolute;
+  top: 14px;
+  left: 19px;
+}
+.star:nth-last-child(3) {
+  position: absolute;
+  top: 18px;
+  left: 9px;
+}
+.star:nth-last-child(4) {
+  position: absolute;
+  top: 23px;
+  left: 24px;
+}
+
+@keyframes piscar {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+/* Dark Mode - Change background color of the "Continue Chat" button */
+body.dark-mode #continueChatBtn {
+  background-color:#555;
+  color: white; 
+  border-color: #01495d;
+}
+
+.search-section {
+  margin-top: -10px;
+  margin-bottom: 20px;
+  margin-left: 370px;
+  display: flex;
+  justify-content: center;
+}
+
+#searchInput {
+  width: 80%;
+  height: 36px;
+  border: 2px solid #02495d;
+  border-radius: 15px;
+  font-size: 20px;
+  font-family: serif;
+  margin-right: 1%;
+}
+
+.mysearch {
+  cursor: pointer;
+  border: 2px solid #02495d;
+  border-radius: 10px;
+  height:40px;
+  width: 8%;
+}
+
+
+.container {
+  position: absolute;
+  top: 200px;
+  right: 20px;
+  left: 340px;
+  height: calc(60vh - 60px); /* Ensure space for the send button */
+  border: 2px solid #02495d;
+  padding: 33px;
+  overflow-y: auto;
+  margin-bottom: 23px;
+}
+
+
+
+.message {
+  background-color: grey;
+  width: 24%;
+  padding: 10px;
+  margin: 17px 4px;
+  border: 2px solid #02495d;
+  border-radius: 10px;
+  word-wrap: break-word; 
+  overflow-wrap: break-word; 
+  white-space: normal; 
+}
+
+.left {
+  float: left;
+  clear: both;
+}
+
+.right {
+  float: right;
+  clear: both;
+}
+.send {
+  position: absolute;
+  bottom: 20px;
+  left: 340px;
+  right: 20px;
+}
+
+#send-container {
+  display: flex;
+  justify-content: center;
+  align-items: center ;
+  text-align: center;
+  margin: auto;
+  max-width: 1085px;
+  width: 100%;
+
+}
+
+#messageInp{
+    width: 83%;
+    height: 34px;
+    border: 2px solid #02495d;
+    border-radius: 15px;
+    font-size: 20px;
+    font-family: serif;
+    margin-right: 1%;
+}
+
+/*Send Button CSS */
+.btn {
+  font-family: inherit;
+  font-size: 20px;
+  background: royalblue;
+  color: white;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.btn span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.btn:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.btn:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+.btn:hover span {
+  transform: translateX(5em);
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}
+
+
+
+
+/* Light Mode - Default styles remain unchanged */
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color:#000000;
+  color: white;
+}
+
+body.dark-mode .logo {
+  filter: invert(1);
+}
+
+body.dark-mode .container {
+  background-color: black;
+  color: white;
+  border-color: #01495d;
+}
+
+body.dark-mode .message {
+  background-color: #444;
+  border-color:#02495d;
+  color: white;
+}
+
+body.dark-mode #messageInp {
+  background-color: #555;
+  color: white;
+}
+
+
+
+body.dark-mode #searchInput {
+  background-color: #555;
+  color: white;
+  border-color: #01495d;
+}
+
+body.dark-mode .mysearch {
+  background-color: #666;
+  color: white;
+}
+
+body.dark-mode nav {
+  background-color: black;
+}
+
+
+
+/*Private msg section css*/
+#userListContainer {
+  position: absolute;
+  top: 200px;
+  left: 20px;
+  width: 17%;
+  height: 60vh; /* Fixed height */
+  border: 2px solid #02495d;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  overflow-y: auto; /* Scrollable if content exceeds height */
+}
+
+#userListContainer h3{
+  text-align: center;
+}
+
+#userList {
+  list-style-type: none;
+  padding: 0;
+}
+
+#userList li {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #ccc;
+}
+
+#userList li:hover {
+  background-color: grey;
+}
+
+
+body.dark-mode #userListContainer {
+  background-color: #555;
+  color: white;
+  border-color: #01495d;
+}
+
+
+body.dark-mode  #userList li:hover{
+  background-color: #ebb6a4;
+}
+
+
