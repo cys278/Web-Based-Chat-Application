@@ -1,4 +1,4 @@
-# Realtime Chat Application
+# Web-Based-Realtime-Chat-Application
 
 ## Description
 This is a web-based chat application built using **Node.js** and **Socket.io** for real-time communication between users. The app supports both public and private messaging, with features like dark mode, search functionality within chats, and a user list for private messaging. The interface is responsive and intuitive, designed for seamless user interaction.
@@ -45,7 +45,7 @@ Ensure you have the following installed on your system:
 
 2. Navigate to the project directory:
    ```bash
-   cd Realtime-Chat-Application
+   cd Web-Based-Chat-Application
    ```
 
 3. Navigate to the server directory:
@@ -139,28 +139,3 @@ Realtime-Chat-Application
 3. **Port Configuration**:
    Change the port number in `index.js` to run the server on a different port.
 
----
-
-## Future Improvements
-
-- **User Authentication**: Add login functionality to authenticate users.
-- **Database Integration**: Store chat history persistently using MongoDB or MySQL.
-- **File Sharing**: Enable users to share files during chats.
-- **Group Chat Rooms**: Allow users to create and join specific chat rooms.
-
----
-
-## License
-This project is licensed under the MIT License. Feel free to modify and use it as needed.
-
----
-
-## Contact
-For any questions or feedback, feel free to contact the developer:
-
-- **Name**: Nirvaan Agarwal (Neil)
-- **Email**: [your_email@example.com] (Replace with your actual email)
-
----
-
-Happy Chatting! 🎉
